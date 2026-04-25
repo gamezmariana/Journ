@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journ</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/aou6jhi.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/jour_Logo.svg" />
+    <!-- Primary Meta Tags -->
+    <title>Journ — Crea. Pega. Llena cada página.</title>
+    <meta name="title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta name="description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta property="og:description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta property="twitter:description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+
+<!-- Página Inicio - pagina principal del sitio web.
+Estructura general:
+Header / Pop up menu / Pop up Carrito
+Hero Phrase
+Club Steps
+Productos
+Slider del Club
+Footer
+-->
+
+<body data-products-view="latest" data-products-limit="4">
+
+    <!-- Header -->
+    <section class="hero">
+        <header class="header">
+            <button class="btn header__text-btn" type="button" onclick="openMenu()" aria-label="Abrir menú">Menú</button>
+            <button class="header__icon-btn" type="button" onclick="openMenu()" aria-label="Abrir menú">
+                <span><i class="ri-menu-fill"></i></span>
+            </button>
+
+            <a href="index.html" aria-label="Inicio">
+                <img class="header__img" src="media/jour_Logo.svg" alt="Journ Logo">
+            </a>
+
+            <a class="header__icon-btn header__cart-link" href="Carrito.html" aria-label="Ir al carrito">
+                <span><i class="ri-shopping-basket-fill"></i></span>
+                <span class="header__cart-count" data-cart-count>0</span>
+            </a>
+            <button class="btn header__text-btn" type="button" data-cart-toggle title="Botón header">
+                Carrito <span class="header__cart-count" data-cart-count>0</span>
+            </button>
+
+            <!-- Pop up Menu -->
+            <div id="headerPopup" class="header__popup">
+                <nav class="header__container">
+                    <button class="close-pop" type="button" onclick="openMenu()" title="Close popup"><i
+                            class="ri-close-circle-fill"></i></button>
+                    <a href="index.html" title="Ir a Inicio">
+                        <img class="header__img" src="media/jour_Logo_Red.svg" alt="Journ Logo">
+                    </a>
+                    <ul>
+                        <li class="header__link"><a href="Kits.html" title="Ir a Kits">Kits</a></li>
+                        <li class="header__link"><a href="Club.html" title="Ir a Club">Club</a></li>
+                        <li class="header__link"><a href="Contacto.html" title="Ir a Contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Fin del Pop up Menu -->
+
+            <!-- Pop up Cart -->
+            <aside id="miniCart" class="mini-cart" aria-live="polite">
+                <div class="mini-cart__head">
+                    <h4>Tu carrito</h4>
+                    <a href="Carrito.html" title="Ir a Carrito">Ver todo</a>
+                </div>
+                <div id="miniCartItems" class="mini-cart__items"></div>
+                <div class="mini-cart__footer">
+                    <h5>Subtotal</h5>
+                    <strong id="miniCartSubtotal">$0.00</strong>
+                    <a class="btn__red mini-cart__cta" href="Checkout.html" title="Finalizar compra">Finalizar
+                        compra</a>
+                </div>
+            </aside>
+            <!-- Fin del Pop up Cart -->
+        </header>
+        <!-- FIN del Header -->
+
+        <!-- Hero Home -->
+        <div>
+            <h1 class="title">Crea. Pega.<br>Llena cada página.</h1>
+        </div>
+
+        <div class="canvas" id="canvas">
+            <img class="piece big" src="media/digital.webp" data-x="17" data-y="41" alt="camera" />
+            <img class="piece" src="media/pin.webp" data-x="80" data-y="40" alt="pin" />
+            <img class="piece" src="media/ticket.webp" data-x="37" data-y="25" alt="ticket" />
+            <img class="piece" src="media/Vintage.webp" data-x="68" data-y="34" alt="flower" />
+            <img class="piece big" src="media/pink-vinyl.webp" data-x="88" data-y="80" alt="record" />
+            <img class="piece big" src="media/boarding-pass.webp" data-x="70" data-y="72" alt="sticker" />
+            <img class="piece" src="media/butter.webp" data-x="10" data-y="69" alt="butter" />
+            <img class="piece small" src="media/Two_Cherries.webp" data-x="50" data-y="82" alt="cherries" />
+            <img class="piece small" src="media/star.webp" data-x="35" data-y="62" alt="star" />
+            <img class="piece small" src="media/star.webp" data-x="31" data-y="69" alt="star" />
+            <img class="piece" src="media/boleto.webp" data-x="28" data-y="85" alt="star" />
+        </div>
+    </section>
+    <!-- Fin del Hero Home -->
+
+    <!-- Hero Phrase -->
+    <section class="section">
+        <div class="home__phrase autoShow">
+            <h2 class="h5 type">El mejor plan del mes</h2>
+            <h3>Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué
+                tienes más papeles que ropa. Eso es journ.</h3>
+        </div>
+    </section>
+    <!-- Fin del Hero Phrase -->
+
+    <!-- Club Steps -->
+    <section class="steps__section">
+        <div class="steps__block section">
+            <h3 class="cardReveal">Tan fácil como abrirlo y crear</h3>
+            <div class="steps__cards cardReveal">
+                <div class="steps__card">
+                    <h5>Paso 1</h5>
+                    <picture>
+                        <source srcset="media/envelope.webp" type="image/webp">
+                        <img loading="lazy" src="media/envelope.webp" alt="sobre">
+                    </picture>
+                    <h3>Elige tu kit</h3>
+                    <p>Cada temporada llega con un tema nuevo. Materiales seleccionados a mano, pensados para que todo
+                        combine.</p>
+                </div>
+                <div class="steps__card">
+                    <h5>Paso 2</h5>
+                    <picture>
+                        <source srcset="media/libreta.webp" type="image/webp">
+                        <img loading="lazy" src="media/libreta.webp" alt="libreta">
+                    </picture>
+                    <h3>Abre y juega</h3>
+                    <p>Stickers, papeles, texturas, recortes y un notebook, todo listo sin buscar, sin improvisar.</p>
+                </div>
+                <div class="steps__card">
+                    <h5>Paso 3</h5>
+                    <picture>
+                        <source srcset="media/card.webp" type="image/webp">
+                        <img loading="lazy" src="media/card.webp" alt="card.webp">
+                    </picture>
+                    <h3>Únete al club</h3>
+                    <p>Crea junto a otras personas que aman lo mismo que tú. Comparte, inspírate, repite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin del Club Steps -->
+
+    <!-- Productos Home -->
+    <section class="section product__grid">
+        <div class="producto__grid-title">
+            <h3 class="autoShow">Bestsellers</h3>
+        </div>
+        <div id="productsContainer" class="product__grid-content"></div>
+    </section>
+    <!-- Fin de Productos Home -->
+
+    <!-- Slider Club -->
+    <section class="club">
+        <div class="club__layout">
+            <div class="club__intro">
+                <h2>Un club para las que crean con las manos.</h2>
+                <p>Sesiones mensuales de journaling en grupo, inspiración compartida y una galería viva de páginas
+                    hechas con cariño.</p>
+                <a href="Club.html" class="btn__red" title="Unirme al club">Unirme al club</a>
+            </div>
+
+            <div class="club__slider">
+                <div class="club__viewport">
+                    <div id="clubSliderTrack" class="club__track"></div>
+                </div>
+
+                <div class="club__controls">
+                    <button id="clubPrev" class="club__arrow" type="button" aria-label="Imagen anterior">
+                        <i class="ri-arrow-left-line"></i>
+                    </button>
+                    <div id="clubDots" class="club__dots"></div>
+                    <button id="clubNext" class="club__arrow" type="button" aria-label="Siguiente imagen">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin del Slider Club -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__block">
+            <div class="footer__logo">
+                <img src="media/jour_Logo_yellow.svg" alt="Journ Logo">
+            </div>
+            <div class="footer__bar">
+                <div class="footer__copy">2026 by Mariana Gámez</div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin del Footer -->
+
+</body>
+
+</html>

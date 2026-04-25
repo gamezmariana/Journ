@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Journ</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/aou6jhi.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/jour_Logo.svg" />
+    <!-- Primary Meta Tags -->
+    <title>Journ — Crea. Pega. Llena cada página.</title>
+    <meta name="title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta name="description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta property="og:description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta property="twitter:description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+
+<!-- Página Checkout - pagina ecommerce del sitio web.
+Estructura general:
+Header / Pop up menu / Pop up Carrito
+Hero Phrase
+Checkout section
+Footer
+-->
+
+<body data-page="checkout">
+
+    <!-- Header -->
+    <section>
+        <header class="header">
+            <button class="btn header__text-btn" type="button" onclick="openMenu()" aria-label="Abrir menú">Menú</button>
+            <button class="header__icon-btn" type="button" onclick="openMenu()" aria-label="Abrir menú"><span><i
+                        class="ri-menu-fill"></i></span></button>
+            <a href="index.html" aria-label="Inicio"><img class="header__img" src="media/jour_Logo.svg"
+                    alt="Journ Logo"></a>
+
+            <a class="header__icon-btn header__cart-link" href="Carrito.html" aria-label="Ir al carrito">
+                <span><i class="ri-shopping-basket-fill"></i></span>
+                <span class="header__cart-count" data-cart-count>0</span>
+            </a>
+            <button class="btn header__text-btn" type="button" data-cart-toggle aria-label="Carrito">
+                Carrito <span class="header__cart-count" data-cart-count>0</span>
+            </button>
+
+            <!-- Pop up Menu -->
+            <div id="headerPopup" class="header__popup">
+                <nav class="header__container">
+                    <button class="close-pop" type="button" onclick="openMenu()" title="Close popup"><i
+                            class="ri-close-circle-fill"></i></button>
+                    <a href="index.html" title="Ir a Inicio"><img class="header__img" src="media/jour_Logo_Red.svg"
+                            alt="Journ Logo"></a>
+                    <ul>
+                        <li class="header__link"><a href="Kits.html" title="Ir a Kits">Kits</a></li>
+                        <li class="header__link"><a href="Club.html" title="Ir a Club">Club</a></li>
+                        <li class="header__link"><a href="Contacto.html" title="Ir a Contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Fin del Pop up Menu -->
+
+            <!-- Pop up Cart -->
+            <aside id="miniCart" class="mini-cart" aria-live="polite">
+                <div class="mini-cart__head">
+                    <h4>Tu carrito</h4>
+                    <a href="Carrito.html" title="Ir al carrito">Ver todo</a>
+                </div>
+                <div id="miniCartItems" class="mini-cart__items"></div>
+                <div class="mini-cart__footer">
+                    <p>Subtotal</p>
+                    <strong id="miniCartSubtotal">$0.00</strong>
+                    <a class="btn__red mini-cart__cta" href="Checkout.html" title="Checkout">Finalizar compra</a>
+                </div>
+            </aside>
+            <!-- Fin del Pop up Cart -->
+        </header>
+    </section>
+    <!-- Fin del Header -->
+
+    <!-- Hero Section  -->
+    <section class="section">
+        <div>
+            <h1 class="line-demo h5">Finalizar compra</h1>
+            <h2 class="line-demo h1">
+                <span class="line-reveal"><span>Último paso:</span></span><br>
+                <span class="line-reveal"><span>tus datos de envío.</span></span>
+            </h2>
+        </div>
+    </section>
+    <!-- Fin del Hero Section  -->
+
+    <!-- Checkout Section  -->
+    <section class="section checkout-layout">
+        <form id="checkoutForm" class="checkout-form" action="#" method="post" novalidate>
+            <h3>Datos de envío</h3>
+
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" required placeholder="Nombre y apellidos">
+
+            <label for="correo">Email</label>
+            <input id="correo" name="correo" type="email" required placeholder="tuemail@correo.com">
+
+            <label for="direccion">Dirección</label>
+            <input id="direccion" name="direccion" type="text" required placeholder="Calle y número">
+
+            <label for="ciudad">Ciudad</label>
+            <input id="ciudad" name="ciudad" type="text" required placeholder="Madrid">
+
+            <label for="cp">Código postal</label>
+            <input id="cp" name="cp" type="text" required placeholder="28000">
+
+            <button class="btn" type="submit" title="Confirmar">Confirmar pedido</button>
+            <div id="checkoutSuccess" class="checkout-success"></div>
+        </form>
+
+        <aside class="checkout-summary">
+            <h3>Resumen de compra</h3>
+            <div id="checkoutSummary"></div>
+        </aside>
+    </section>
+    <!-- Fin del Checkout Section  -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__block">
+            <div class="footer__logo">
+                <img src="media/jour_Logo_yellow.svg" alt="Journ Logo">
+            </div>
+            <div class="footer__bar">
+                <div class="footer__copy">2026 by Mariana Gámez</div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin del Footer -->
+
+</body>
+
+</html>

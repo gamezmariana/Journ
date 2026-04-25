@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | Journ</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/aou6jhi.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/jour_Logo.svg" />
+    <!-- Primary Meta Tags -->
+    <title>Journ — Crea. Pega. Llena cada página.</title>
+    <meta name="title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta name="description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta property="og:description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Journ — Crea. Pega. Llena cada página." />
+    <meta property="twitter:description"
+        content="Sesiones de journaling en grupo, acceso anticipado a cada kit y una comunidad que entiende por qué tienes más papeles que ropa. Eso es journ." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+
+<!-- Página Carrito - pagina ecommerce del sitio web.
+Estructura general:
+Header / Pop up menu / Pop up Carrito
+Hero Phrase
+Cart section
+Footer
+-->
+
+<body data-page="cart">
+
+    <!-- Header -->
+    <section>
+        <header class="header">
+            <button class="btn header__text-btn" type="button" onclick="openMenu()" aria-label="Abrir menú">Menú</button>
+            <button class="header__icon-btn" type="button" onclick="openMenu()" aria-label="Abrir menú"><span><i
+                        class="ri-menu-fill"></i></span></button>
+            <a href="index.html" aria-label="Inicio">
+                <img class="header__img" src="media/jour_Logo.svg" alt="Journ Logo"></a>
+
+            <a class="header__icon-btn header__cart-link" href="Carrito.html" aria-label="Ir al carrito">
+                <span><i class="ri-shopping-basket-fill"></i></span>
+                <span class="header__cart-count has-items" data-cart-count>0</span>
+            </a>
+            <button class="btn header__text-btn" type="button" data-cart-toggle title="Botón header">
+                Carrito <span class="header__cart-count" data-cart-count>0</span>
+            </button>
+
+            <!-- Pop up Menu -->
+            <div id="headerPopup" class="header__popup">
+                <nav class="header__container">
+                    <button class="close-pop" type="button" onclick="openMenu()" aria-label="Close popup"><i
+                            class="ri-close-circle-fill"></i></button>
+                    <a href="index.html" title="Ir a Inicio"><img class="header__img" src="media/jour_Logo_Red.svg"
+                            alt="Journ Logo"></a>
+                    <ul>
+                        <li class="header__link"><a href="Kits.html" title="Ir a Kits">Kits</a></li>
+                        <li class="header__link"><a href="Club.html" title="Ir a Club">Club</a></li>
+                        <li class="header__link"><a href="Contacto.html" title="Ir a Club">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Fin del Pop up Menu -->
+
+            <!-- Pop up Cart -->
+            <aside id="miniCart" class="mini-cart" aria-live="polite">
+                <div class="mini-cart__head">
+                    <h4>Tu carrito</h4>
+                    <a href="Carrito.html" title="Ir a Carrito">Ver todo</a>
+                </div>
+                <div id="miniCartItems" class="mini-cart__items"></div>
+                <div class="mini-cart__footer">
+                    <p>Subtotal</p>
+                    <strong id="miniCartSubtotal">$0.00</strong>
+                    <a class="btn__red mini-cart__cta" href="Checkout.html" title="Finalizar compra">Finalizar
+                        compra</a>
+                </div>
+            </aside>
+            <!-- Fin del Pop up Cart -->
+        </header>
+    </section>
+    <!-- Fin del Header -->
+
+    <!-- Hero Section  -->
+    <section class="section">
+        <div>
+            <h1 class="line-demo h5">Carrito</h1>
+            <h2 class="line-demo h1">
+                <span class="line-reveal"><span>Revisa tu compra</span></span><br>
+                <span class="line-reveal"><span>antes de pagar.</span></span>
+            </h2>
+        </div>
+    </section>
+    <!-- Fin del Hero Section  -->
+
+    <!-- Cart Section  -->
+    <section class="section cart-layout">
+        <div id="cartItems" class="cart-list"></div>
+
+        <aside class="cart-summary">
+            <h3>Resumen</h3>
+            <div class="cart-summary__line"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+            <div class="cart-summary__line"><span>Envío</span><strong id="cartShipping">$0.00</strong></div>
+            <div class="cart-summary__line is-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+            <a href="Checkout.html" class="btn cart-summary__btn" title="ir a checkout">Continuar al pago</a>
+            <a href="Kits.html" class="cart-summary__back" title="ir a Kits">Seguir comprando</a>
+        </aside>
+    </section>
+    <!-- Fin del Cart Section  -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__block">
+            <div class="footer__logo">
+                <img src="media/jour_Logo_yellow.svg" alt="Journ Logo">
+            </div>
+            <div class="footer__bar">
+                <div class="footer__copy">2026 by Mariana Gámez</div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin del Footer -->
+
+</body>
+
+</html>
