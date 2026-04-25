@@ -45,15 +45,15 @@ const products = [
         url: 'Producto.html?product=Welcome Spring'
     },
     {
-        id: 'summerize',
+        id: 'beach-vibes',
         image: 'media/summer_complete.webp',
         gallery: ['media/summer_complete.webp', 'media/summer_sticker.webp', 'media/summer_notebook.webp'],
-        title: 'Summerize',
+        title: 'Beach Vibes',
         description: 'Perfecto para álbumes de viaje, diarios de vacaciones, colecciones de recuerdos de verano, páginas de listas de planes o simplemente para capturar la vibra de la temporada antes de que se acabe.',
         contains: ['Hoja de color azul con textura de arena', 'Stickers de bikinis, palmeras y cámara fotográfica', 'Stickers de polaroids y estrellas de mar', 'Recortes temáticos de verano', 'Notebook A5 de tapa azul océano'],
         edition: 'Edición Verano 2026',
         price: 15,
-        url: 'Producto.html?product=summerize'
+        url: 'Producto.html?product=beach-vibes'
     },
     {
         id: 'golden-fall',
@@ -72,7 +72,7 @@ const products = [
         gallery: ['media/disco_complete.webp', 'media/disco_sticker.webp', 'media/disco_notebook.webp'],
         title: 'Disco Fever',
         description: 'Para páginas de celebración, álbumes de noches especiales, journaling de metas conseguidas, spreads de main character energy, listas de cosas que te hacen sentir poderosa o simplemente para crear algo que brille tanto como el momento que estás viviendo.',
-        contains: ['Hoja con impresión de lentejuelas y textura metalizada', 'Imágenes con destellos neón y elementos de discoteca', 'Stickers de labios, martinis, estrellas y champaña','Recortes temáticos de fiesta y celebración', 'Notebook A5 de tapa rosa',],
+        contains: ['Hoja con impresión de lentejuelas y textura metalizada', 'Imágenes con destellos neón y elementos de discoteca', 'Stickers de labios, martinis, estrellas y champaña', 'Recortes temáticos de fiesta y celebración', 'Notebook A5 de tapa rosa',],
         edition: 'Party Edition',
         price: 15,
         url: 'Producto.html?product=disco-fever'

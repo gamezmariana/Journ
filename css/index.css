@@ -227,7 +227,7 @@ ul {
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 6;
     display: none;
 
     &.active {
@@ -246,6 +246,8 @@ ul {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: flex-start;
+
     gap: 2rem;
 
     & ul {
@@ -270,6 +272,8 @@ ul {
 
     }
 }
+
+
 
 .header__link {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -322,6 +326,12 @@ ul {
     justify-content: center;
     font: 800 1.5rem var(--font-text);
     margin-left: 0.4rem;
+}
+
+@media (max-width: 900px) {
+    .header__cart-count {
+        display: none;
+    }
 }
 
 .header__cart-count.has-items {
@@ -454,6 +464,15 @@ ul {
     color: var(--color-yellow);
 }
 
+@media (max-width: 768px) {
+    .title {
+        font: 800 5.5rem var(--font-title);
+        gap: 2.125rem;
+        line-height: 5.5rem;
+
+    }
+}
+
 .canvas {
     position: absolute;
     inset: 0;
@@ -564,6 +583,7 @@ ul {
 /* Steps */
 .steps__section {
     background: url(../media/jour_back_pink.webp);
+    background-color: var(--color-pink);
 }
 
 .steps__block {
@@ -632,6 +652,18 @@ ul {
     }
 
     to {
+        filter: none;
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardReveal {
+        animation: none;
+        animation-timeline: auto;
+        /* opcional, para resetear */
         filter: none;
         opacity: 1;
         scale: 1;
@@ -1250,7 +1282,7 @@ ul {
 }
 
 .single-product__image {
-    width: min(56%, 50rem);
+    width: min(56%, 18rem);
     object-fit: contain;
 }
 
@@ -1291,6 +1323,13 @@ ul {
     p,
     strong {
         color: var(--color-yellow);
+    }
+}
+
+@media (max-width: 900px) {
+    .single-product__head h2 {
+        font: 800 clamp(3rem, 4vw, 1.6rem) var(--font-title);
+        line-height: 3rem;
     }
 }
 
