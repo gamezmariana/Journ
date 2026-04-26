@@ -527,7 +527,7 @@ ul {
     align-items: center;
     text-align: center;
     min-height: 75vh;
-    padding: 5rem;
+    padding: 4rem;
     gap: 1rem;
 
 
@@ -536,6 +536,14 @@ ul {
         color: var(--color-pink);
     }
 
+}
+
+@media (max-width: 768px) {
+    .home__phrase h3 {
+        font: 800 2.2rem var(--font-title);
+        line-height: 2.4rem;
+
+    }
 }
 
 .autoShow {
