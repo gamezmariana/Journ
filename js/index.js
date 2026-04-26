@@ -680,6 +680,19 @@ if (canvas) {
     canvas.addEventListener('pointercancel', endDrag)
 }
 
+/* The above JavaScript code is adding an event listener to a form with the id 'registroForm'. When the
+form is submitted, it prevents the default form submission behavior using `e.preventDefault()`, sets
+the text content of an element with the id 'msg' to '¡Recibido! En breve conectamos el envío real.',
+and then resets the form. This code is likely used to handle form submissions and provide feedback
+to the user. */
+const form = document.getElementById('registroForm');
+  const msg = document.getElementById('msg');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // evita envío real
+    msg.textContent = '¡Recibido! En breve nos contactaremos contigo.';
+    form.reset();
+  });
 
 /* The above code is creating an array called `clubSlides` that contains objects with properties
 `image` and `alt`. Each object represents a slide for a club presentation and includes an image
@@ -890,3 +903,5 @@ document.addEventListener('click', (event) => {
 renderProductGrid()
 renderProductDetail()
 renderAllCartUI()
+
+
